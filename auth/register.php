@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h2>Create Account</h2>
+    <form action="process_register.php" method="post">
+        <label>Full Name</label>
+        <input type="text" name="fullname" required><br><br>
+
+        <label>Email</label>
+        <input type="email" name="email" required><br><br>
+
+        <label>Password</label>
+        <input type="password" name="password" required><br><br>
+
+        <label>Confirm Password</label>
+        <input type="password" name="confirm_password" required><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <br>
+    <a href="login.php">Already have an account?</a>
+</body>
+</html>
