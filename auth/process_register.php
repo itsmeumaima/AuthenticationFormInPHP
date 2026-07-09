@@ -3,7 +3,7 @@
 include "../config/db.php";
 
 // Get form data
-$fullname = trim($_POST['fullname']);
+$fullname = trim($_POST['fullname']); // TRIM REMOVE UNNECESSARY SPACES
 $email = trim($_POST['email']);
 $password = $_POST['password'];
 $confirmPassword = $_POST['confirm_password'];
@@ -18,7 +18,7 @@ $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 // Check if email already exists
 $check = $conn->prepare("SELECT id FROM users WHERE email = ?");
-$check->bind_param("s", $email);
+$check->bind_param("s", $email); // S TELL THE DATATYPE THAT IS STRING IN THIS CASE
 $check->execute();
 $result = $check->get_result();
 
